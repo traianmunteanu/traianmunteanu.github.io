@@ -1,1 +1,197 @@
-Under construction
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traian | QA Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto Mono', monospace;
+      background-color: #000000;
+      color: #00ff00;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding: 20px;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .profile h1,
+    .profile h2 {
+      margin: 0;
+    }
+
+    .profile h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      overflow: hidden;
+      /* Hide overflow */
+      white-space: nowrap;
+      /* Prevent line breaks */
+      animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite;
+      display: inline-block;
+      border-right: 3px solid transparent;
+      /* Create typing cursor */
+    }
+
+    .profile h1:before {
+      content: "_";
+      margin-right: 5px;
+    }
+
+    .profile h2 {
+      font-size: 1.5em;
+      margin-top: 0;
+    }
+
+    .statement {
+      font-size: 1em;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .contact {
+      margin-top: 20px;
+    }
+
+    .links a {
+      color: #00ff00;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    .links a.email,
+    .links a.phone {
+      color: #00ff00;
+    }
+
+    .links a:hover {
+      color: #66ff66;
+    }
+
+    .skills ul,
+    .contact p {
+      font-size: 1em;
+      margin: 0;
+      padding-left: 20px;
+      list-style-type: none;
+      text-align: left;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .profile h1 {
+        font-size: 2em;
+      }
+
+      .profile h2 {
+        font-size: 1.3em;
+      }
+
+      .statement {
+        font-size: 0.9em;
+      }
+
+      .links a {
+        font-size: 0.9em;
+      }
+
+      .skills ul,
+      .contact p {
+        font-size: 0.9em;
+      }
+    }
+
+    /* Typing animation */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: #00ff00;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="profile">
+        <h1></h1>
+        <h2>QA Automation Engineer | Web Developer</h2>
+      </div>
+      <div class="statement">
+        <p>I specialize in automation and QA automation tools, ensuring seamless and efficient software testing
+          processes. With expertise in creating robust automated testing frameworks, I help businesses achieve higher
+          productivity and reliability in their software development lifecycle.</p>
+      </div>
+      <div class="contact">
+        <h3>Contact:</h3>
+        <p class="links"><a class="email" href="mailto:hello@traianmunteanu.com">Email: hello@traianmunteanu.com</a></p>
+        <p class="links"><a class="phone" href="tel:07514462345">Phone: 07514462345</a></p>
+      </div>
+      <div class="skills">
+        <h3>Skills:</h3>
+        <ul>
+          <li>Test Automation: Selenium, Cypress</li>
+          <li>Programming: Python, JavaScript</li>
+          <li>Web Development: HTML, CSS, JavaScript</li>
+          <li>Version Control: Git</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    // JavaScript to start typing animation after page load
+    window.onload = function () {
+      const h1 = document.querySelector('.profile h1');
+      const text = 'Traian Munteanu';
+      let index = 0;
+
+      function type() {
+        if (index < text.length) {
+          h1.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, 150); // Adjust typing speed here
+        }
+      }
+
+      type();
+    };
+  </script>
+</body>
+
+</html>
